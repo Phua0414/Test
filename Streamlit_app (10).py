@@ -77,7 +77,7 @@ if submit:
     input_features = np.array([[gender, hypertension, heart_disease, smoking_history, hba1c, glucose, age_group, bmi_category]])
     scaled_input = scaler.transform(input_features)
 
-    model = models[model_choice]['model']
+    model = models[model_choice]
     prediction = model.predict(scaled_input)[0]
     probability = model.predict_proba(scaled_input)[0][1]
 
