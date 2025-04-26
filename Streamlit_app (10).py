@@ -15,8 +15,8 @@ def download_file(url):
         raise Exception("Error downloading file")
 
 # GitHub URLs for the model and scaler files
-model_url = 'https://github.com/Phua0414/Test/releases/download/Tag1/all_models.pkl'
-scaler_url = 'https://github.com/Phua0414/Test/releases/download/Tag1/scaler.pkl'
+model_url = 'https://github.com/Phua0414/Test/releases/download/Tag-1/all_models.pkl'
+scaler_url = 'https://github.com/Phua0414/Test/releases/download/Tag-1/scaler.pkl'
 
 # Download the model and scaler files
 model_data = download_file(model_url)
