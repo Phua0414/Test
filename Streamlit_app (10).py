@@ -44,7 +44,7 @@ model_choice = st.selectbox("Choose a model below:", model_names)
 model_accuracy = {
     'K-Nearest Neighbors': 0.94,
     'Random Forest': 0.95,
-    'Decision Tree': 0.96
+    'Logistic Regression': 0.87
 }
 
 if model_choice in model_accuracy:
