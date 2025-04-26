@@ -1,8 +1,8 @@
 streamlit
-pandas
-matplotlib
-scikit-learn
-hdbscan
-requests
 numpy
-scipy
+pandas
+scikit-learn
+matplotlib
+seaborn
+requests
+xgboost
