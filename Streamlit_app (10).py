@@ -2,12 +2,27 @@ import streamlit as st
 import numpy as np
 import pickle
 
-# 📦 Load Models and Scaler
-with open('all_models.pkl', 'rb') as f:
-    models = pickle.load(f)
-with open('scaler.pkl', 'rb') as f:
-    scaler = pickle.load(f)
+#Function to download files from GitHub
+def download_file(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.content
+    else:
+        raise Exception("Error downloading file")
 
+# GitHub URLs for the model and scaler files
+model_url = 'https://github.com/Phua0414/Assignment-AI/releases/download/Tag1/all_models.pkl'
+scaler_url = 'https://github.com/Phua0414/Assignment-AI/releases/download/Tag1/scaler.pkl'
+
+# Download the model and scaler files
+model_data = download_file(model_url)
+scaler_data = download_file(scaler_url)
+
+# Load the models and scaler from the downloaded data
+models = pickle.loads(model_data)
+scaler = pickle.loads(scaler_data)
+
+# List of available models
 model_names = list(models.keys())
 
 # Feature Names
